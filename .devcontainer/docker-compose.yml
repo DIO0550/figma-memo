@@ -7,10 +7,9 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ..:/workspace:cached
-      - /workspace/website/node_modules
     ports:
-      - '8080:3000' # ホスト側8080 -> コンテナ側3000
-      - '8081:3001' # ホスト側8081 -> コンテナ側3001
+      - '9090:3000' # ホスト側9090 -> コンテナ側3000
+      - '9091:3001' # ホスト側9091 -> コンテナ側3001
     environment:
       - NODE_ENV=development
     working_dir: /workspace

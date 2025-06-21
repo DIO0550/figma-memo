@@ -35,6 +35,7 @@ USER node
 # Set environment variables
 ENV NODE_ENV=development
 ENV PORT=3000
+ENV HOST=0.0.0.0
 
 # Expose ports
 EXPOSE 3000 3001

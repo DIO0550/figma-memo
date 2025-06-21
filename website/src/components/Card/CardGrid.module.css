@@ -1,0 +1,59 @@
+/* カードグリッド基本スタイル */
+.cardGrid {
+  display: grid;
+  width: 100%;
+}
+
+/* カラム数のバリエーション */
+.cardGrid--1cols {
+  grid-template-columns: 1fr;
+}
+
+.cardGrid--2cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cardGrid--3cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cardGrid--4cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 996px) {
+  .cardGrid--4cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardGrid--3cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cardGrid--4cols,
+  .cardGrid--3cols,
+  .cardGrid--2cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ギャップサイズのバリエーション */
+.cardGrid--gap-small {
+  gap: 1rem;
+}
+
+.cardGrid--gap-medium {
+  gap: 1.5rem;
+}
+
+.cardGrid--gap-large {
+  gap: 2rem;
+}
+
+/* グリッドアイテムの均等な高さ */
+.cardGrid > * {
+  height: 100%;
+}
