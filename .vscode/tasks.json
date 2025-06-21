@@ -4,7 +4,7 @@
     {
       "label": "Docusaurus: Start Development Server",
       "type": "shell",
-      "command": "npm",
+      "command": "yarn",
       "args": ["start"],
       "group": "build",
       "isBackground": true,
@@ -16,8 +16,8 @@
     {
       "label": "Docusaurus: Build for Production",
       "type": "shell",
-      "command": "npm",
-      "args": ["run", "build"],
+      "command": "yarn",
+      "args": ["build"],
       "group": "build",
       "problemMatcher": [],
       "options": {
@@ -27,8 +27,8 @@
     {
       "label": "Docusaurus: Serve Built Site",
       "type": "shell",
-      "command": "npm",
-      "args": ["run", "serve"],
+      "command": "yarn",
+      "args": ["serve"],
       "group": "test",
       "isBackground": true,
       "problemMatcher": [],
@@ -39,8 +39,8 @@
     {
       "label": "Docusaurus: Clear Cache",
       "type": "shell",
-      "command": "npm",
-      "args": ["run", "clear"],
+      "command": "yarn",
+      "args": ["clear"],
       "group": "build",
       "problemMatcher": [],
       "options": {
@@ -50,7 +50,7 @@
     {
       "label": "Install Dependencies",
       "type": "shell",
-      "command": "npm",
+      "command": "yarn",
       "args": ["install"],
       "group": "build",
       "problemMatcher": [],
