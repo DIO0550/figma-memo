@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Figma Memo',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Figmaデザインのメモとリファレンス',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -41,6 +41,7 @@ const config: Config = {
       'classic',
       {
         docs: {
+          routeBasePath: '/', // ドキュメントをルートに配置
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -50,6 +51,7 @@ const config: Config = {
           remarkPlugins: [],
           rehypePlugins: [],
         },
+        blog: false, // ブログを無効化
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -61,18 +63,12 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Figma Memo',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Figma Memo Logo',
         src: 'img/logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
@@ -83,15 +79,6 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
         {
           title: 'Community',
           items: [
@@ -110,7 +97,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Figma Memo. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
