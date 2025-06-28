@@ -2,66 +2,93 @@
 title: 基本的な作り方
 ---
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 ## 手順
+
+Figma でボタンを作成する基本的な手順を説明します。
 
 ### 1. フレームの配置
 
-- 画面下のメニューから、フレームを選択する。
+画面下のツールバーからフレームを選択し、ボタンの土台を作成します。
 
-  <div style={{ textAlign: 'center', margin: '20px 0' }}>
-    <img
-      src={useBaseUrl('/img/frame/menu-select-frame.png')}
-      alt="フレームメニュー"
-      width="600"
-      style={{
-        border: '1px solid #e1e4e8',
-        borderRadius: '8px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-      }}
-    />
-  </div>
+- 画面下のメニューから、[フレーム]を選択する
+
+  <DocumentImage src="/img/ui/menu-frame-select.png" alt="フレームメニュー" />
 
 - 任意の大きさで、ページに配置する
 
-  <div style={{ textAlign: 'center', margin: '20px 0' }}>
-    <img
-      src={useBaseUrl('/img/frame/plane-frame.png')}
-      alt="空のフレーム"
-      width="600"
-      style={{
-        border: '1px solid #e1e4e8',
-        borderRadius: '8px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-      }}
-    />
-  </div>
+  <DocumentImage src="/img/button/step01-frame-empty.png" alt="空のフレーム" />
 
 ### 2. 背景色の設定
 
-- [右メニュ] > [塗り] から、設定したい背景色を設定する。
-  <div style={{ textAlign: 'center', margin: '20px 0' }}>
-    <img
-      src={useBaseUrl('/img/fill/fill-menu.png')}
-      alt="塗りメニュー"
-      width="600"
-      style={{
-        border: '1px solid #e1e4e8',
-        borderRadius: '8px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-      }}
-    />
-  </div>
-  <div style={{ textAlign: 'center', margin: '20px 0' }}>
-    <img
-      src={useBaseUrl('/img/frame/fill-frame.png')}
-      alt="塗りが設定されたフレーム"
-      width="600"
-      style={{
-        border: '1px solid #e1e4e8',
-        borderRadius: '8px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-      }}
-    />
-  </div>
+フレームに背景色を設定して、ボタンらしい見た目にします。
+
+- 右メニューの[塗り]から、設定したい背景色を設定する
+
+  <DocumentImage src="/img/ui/menu-fill.png" alt="塗りメニュー" />
+
+  <DocumentImage
+    src="/img/button/step02-frame-filled.png"
+    alt="塗りが設定されたフレーム"
+  />
+
+### 3. ボタンのテキストの配置
+
+ボタンに表示するテキストを追加し、適切なサイズに調整します。
+
+- 画面下のメニューから、[テキスト]を選択する
+
+  <DocumentImage src="/img/ui/menu-text.png" alt="テキストメニュー" />
+
+- フレーム上で、テキストアイテムを配置して任意の文字を入力する
+
+  <DocumentImage src="/img/button/step03-text-input.png" alt="テキストを入力" />
+
+- 右メニューの[レイアウト] > [サイズ変更] > [幅の自動調整]を選択して、幅を文字の大きさに合わせる
+
+  <DocumentImage src="/img/ui/menu-layout-autowidth.png" alt="幅の自動調整" />
+
+  <DocumentImage
+    src="/img/button/step04-text-autowidth.png"
+    alt="テキストの幅を自動調整したボタン"
+  />
+
+### 4. オートレイアウトの設定
+
+フレームにオートレイアウトを追加して、テキストに応じて自動でサイズが調整されるようにします。
+
+- フレームを右クリックして、[オートレイアウトの追加]を選択する
+
+  <DocumentImage
+    src="/img/ui/menu-autolayout-add.png"
+    alt="オートレイアウトの追加メニュー"
+  />
+
+  <DocumentImage
+    src="/img/button/step05-autolayout-set.png"
+    alt="オートレイアウトが設定されたボタン"
+  />
+
+### 5. 見た目の調整
+
+ボタンらしい見た目にするために、パディングと角丸を設定します。
+
+#### パディングの調整
+
+- 右メニューの[オートレイアウト] > [パディング]から、適切な余白を設定する
+
+  <DocumentImage
+    src="/img/button/step06-padding-set.png"
+    alt="パディングが設定されたボタン"
+  />
+
+#### 角丸の調整
+
+- 右メニューの[外見] > [角の半径]から、ボタンの角丸を調整する
+- 一般的なボタンでは、**4px** 程度の角丸が適正とされています
+
+  <DocumentImage src="/img/ui/panel-appearance.png" alt="外見メニュー" />
+
+  <DocumentImage
+    src="/img/button/step07-radius-set.png"
+    alt="角丸が設定されたボタン"
+  />
