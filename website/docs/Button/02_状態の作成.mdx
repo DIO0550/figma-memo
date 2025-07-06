@@ -1,0 +1,297 @@
+---
+title: 状態の作成
+---
+
+## 概要
+
+ボタンは、ホバー状態などで見た目を変更することがほとんどのため、その状態の作成方法を記載する。
+
+## 共通手順
+
+### 1. コンポーネント化
+
+ボタンを使いまわせるように、まずはコンポーネント化する。
+
+#### フレームの名前の変更
+
+コンポーネントで使いまわす際に、フレーム名がデフォルトのままだと、後でどのボタンか判別しにくくなります。そのため、わかりやすい名前を付けましょう。
+
+1. 対象のフレームを選択します
+2. レイヤーパネルでフレーム名をダブルクリックするか、フレーム選択時に左上に表示される名前部分をクリックして編集状態にします
+
+<DocumentImage
+  src="/img/button/02/frame-naming/before.png"
+  alt="フレーム名の編集前"
+/>
+
+3. ボタンの用途がわかる名前を入力します（例：「Primary Button」「Secondary Button」など）
+
+<DocumentImage
+  src="/img/button/02/frame-naming/after.png"
+  alt="フレーム名の編集後"
+/>
+
+#### コンポーネントの作成
+
+1. 対象のフレームを選択します
+2. フレームを右クリックして、コンテキストメニューから「コンポーネントの作成」を選択します
+
+<DocumentImage
+  src="/img/ui/menu-component-create.png"
+  alt="コンポーネント作成のコンテキストメニュー"
+/>
+
+3. コンポーネントが作成され、フレームの左上にコンポーネントアイコンが表示されます
+
+<DocumentImage
+  src="/img/button/02/component-creation/completed.png"
+  alt="コンポーネント作成後の状態"
+/>
+
+<Card
+  title="コンポーネントについて"
+  description="Figmaでのコンポーネントの作成方法と使用方法について詳しく説明しています。"
+  link="/Component"
+/>
+
+### 2. バリアントの作成
+
+コンポーネントに状態（ホバー、アクティブ、無効化など）を追加するために、バリアント機能を使用します。
+
+#### バリアントの追加手順
+
+1. 作成したコンポーネントを選択します
+2. 右側のプロパティパネルで、デザインタブ内の「バリアント」セクションにある **+** ボタンをクリックして「バリアントの追加」を選択します
+
+<DocumentImage
+  src="/img/ui/menu-variant-create.png"
+  alt="バリアント追加メニュー"
+/>
+
+3. 新しいバリアントが作成され、元のコンポーネントと複製されたバリアントが表示されます
+
+<DocumentImage
+  src="/img/button/02/variant-creation/created.png"
+  alt="バリアント作成後の状態"
+/>
+
+4. 右側のプロパティパネルで、バリアントのプロパティを設定します
+
+<DocumentImage
+  src="/img/ui/menu-variant-property.png"
+  alt="バリアントプロパティパネル"
+/>
+
+5. プロパティ名（例：「State」）と値（例：「Default」「Hover」）を設定して、状態を定義します
+
+<DocumentImage
+  src="/img/button/02/variant-creation/property-input.png"
+  alt="バリアントプロパティの入力"
+/>
+
+#### 状態の見た目の調整
+
+6. 作成したバリアント（例：Hover 状態）を選択し、背景色や影などを調整して、状態に応じた視覚的な変化を加えます
+
+## Default（デフォルト）状態の設定
+
+バリアント作成時に元のコンポーネントが Default 状態として設定されますが、プロパティ値を明確に設定しておくことで管理しやすくなります。
+
+1. バリアント作成前に作成した元のフレームを選択します
+
+<DocumentImage
+  src="/img/button/02/default-state/select-frame.png"
+  alt="デフォルトフレームの選択"
+/>
+
+2. 右側のプロパティパネルで、State プロパティの値を入力します
+
+<DocumentImage
+  src="/img/button/02/default-state/input-property.png"
+  alt="Defaultプロパティの入力"
+/>
+
+:::tip プロパティ値の候補
+
+以下のような値が一般的に使用されます：
+
+- **Default** - 最も標準的で推奨される表記
+- **Normal** - 通常状態を表す分かりやすい表記
+- **Rest** - UI/UX デザインでよく使われる安静状態
+- **Idle** - 待機状態を表す
+- **Base** - 基本状態を表す
+
+**推奨**: 他の状態（Hover、Pressed、Disabled）との統一性を考慮し、英語表記の「Default」を使用することをお勧めします。
+
+:::
+
+## Hover（ホバー）状態の設定
+
+1. バリアント作成で作成したフレームを選択します
+
+<DocumentImage
+  src="/img/button/02/hover-state/select-frame.png"
+  alt="ホバーフレームの選択"
+/>
+
+2. 右側のプロパティパネルで、State プロパティの値を入力します
+
+<DocumentImage
+  src="/img/button/02/hover-state/input-property.png"
+  alt="Hoverプロパティの入力"
+/>
+
+3. ホバーのフレームの背景色を変更します
+
+右側のプロパティパネルで「Fill」の色をクリックしてカラーピッカーを開きます
+
+<div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
+  <div style={{ flex: 1 }}>
+    <DocumentImage
+      src="/img/button/02/hover-state/color-picker-before.png"
+      alt="カラーピッカー操作前"
+    />
+  </div>
+  <div style={{ flex: 1 }}>
+    <DocumentImage
+      src="/img/button/02/hover-state/color-picker-after.png"
+      alt="カラーピッカー操作後"
+    />
+  </div>
+</div>
+
+HSL モードで輝度（L 値）を調整して明るくします
+
+<DocumentImage
+  src="/img/button/02/hover-state/completed.png"
+  alt="ホバー状態の背景色変更完了"
+/>
+
+:::tip Hover（ホバー）状態の背景色選択
+
+一般的には元の色より **10-20%明るく**します：
+
+- **具体例**: #007AFF → #339FFF
+- **HSL 調整**: L 値が 50%の場合 → 60-70%に変更
+- **効果**: ユーザーの注意を引き、クリック可能であることを示唆
+
+:::
+
+## Pressed（プレス）状態
+
+1. ホバー状態のフレームを選択して、バリアント追加の **+** ボタンをクリックします
+
+<DocumentImage
+  src="/img/button/02/pressed-state/add-variant.png"
+  alt="バリアント追加"
+/>
+
+2. 新しく作成されたフレームを選択します
+
+<DocumentImage
+  src="/img/button/02/pressed-state/select-frame.png"
+  alt="プレス状態フレームの選択"
+/>
+
+3. 右側のプロパティパネルで、State プロパティの値を「Pressed」に入力します
+
+<DocumentImage
+  src="/img/button/02/pressed-state/input-property.png"
+  alt="Pressedプロパティの入力"
+/>
+
+4. プレス状態のフレームの背景色を変更します
+
+右側のプロパティパネルで「Fill」の色をクリックしてカラーピッカーを開きます
+
+<div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
+  <div style={{ flex: 1 }}>
+    <DocumentImage
+      src="/img/button/02/pressed-state/color-picker-before.png"
+      alt="カラーピッカー操作前（ホバー状態の明るい色）"
+    />
+  </div>
+  <div style={{ flex: 1 }}>
+    <DocumentImage
+      src="/img/button/02/pressed-state/color-picker-after.png"
+      alt="カラーピッカー操作後（デフォルト色より暗くした状態）"
+    />
+  </div>
+</div>
+
+HSL モードで輝度（L 値）を調整して、デフォルト色よりも暗くします
+
+<DocumentImage
+  src="/img/button/02/pressed-state/completed.png"
+  alt="プレス状態の背景色変更完了"
+/>
+
+:::tip Pressed（プレス）状態の背景色選択
+
+一般的には元の色より **10-20%暗く**します：
+
+- **具体例**: #007AFF → #0051D5
+- **HSL 調整**: L 値が 50%の場合 → 30-40%に変更
+- **効果**: 押し込まれた感覚を表現し、アクションの完了を示唆
+
+:::
+
+## Disabled（無効）状態
+
+1. プレス状態のフレームを選択して、バリアント追加の **+** ボタンをクリックします
+
+<DocumentImage
+  src="/img/button/02/disabled-state/add-variant.png"
+  alt="バリアント追加"
+/>
+
+2. 新しく作成されたフレームを選択します
+
+<DocumentImage
+  src="/img/button/02/disabled-state/select-frame.png"
+  alt="無効状態フレームの選択"
+/>
+
+3. 右側のプロパティパネルで、State プロパティの値を「Disabled」に入力します
+
+<DocumentImage
+  src="/img/button/02/disabled-state/input-property.png"
+  alt="Disabledプロパティの入力"
+/>
+
+4. 無効状態のフレームの背景色を変更します
+
+右側のプロパティパネルで「Fill」の色をクリックしてカラーピッカーを開きます
+
+<div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
+  <div style={{ flex: 1 }}>
+    <DocumentImage
+      src="/img/button/02/disabled-state/color-picker-before.png"
+      alt="カラーピッカー操作前（プレス状態の暗い色）"
+    />
+  </div>
+  <div style={{ flex: 1 }}>
+    <DocumentImage
+      src="/img/button/02/disabled-state/color-picker-after.png"
+      alt="カラーピッカー操作後（グレー系の色に変更）"
+    />
+  </div>
+</div>
+
+RGB モードでグレー系の色に変更します
+
+<DocumentImage
+  src="/img/button/02/disabled-state/completed.png"
+  alt="無効状態の背景色変更完了"
+/>
+
+:::tip Disabled（無効）状態の背景色選択
+
+一般的には以下のように変更します：
+
+- **RGB で統一された値**: R, G, B を同じ値にしてグレーにする
+- **推奨値**: #CCCCCC（204, 204, 204）または #E5E5E5（229, 229, 229）
+- **具体例**: #0051D5 → #CCCCCC
+- **効果**: クリックできないことを視覚的に表現し、アクセシビリティを確保
+
+:::
