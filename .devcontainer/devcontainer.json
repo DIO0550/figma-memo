@@ -25,7 +25,7 @@
   },
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "cd website && npm install",
+  "postCreateCommand": "cd website && npm install && git config --global core.quotepath false && git config --global i18n.commit.encoding utf-8",
 
   // Configure tool-specific properties.
   "customizations": {
@@ -35,11 +35,7 @@
         "esbenp.prettier-vscode",
         "bradlc.vscode-tailwindcss",
         "ms-vscode.vscode-json",
-        "davidanson.vscode-markdownlint",
-        "yzhang.markdown-all-in-one",
         "ms-vscode.live-server",
-        "formulahendry.auto-rename-tag",
-        "christian-kohler.path-intellisense",
         "ms-vscode.vscode-eslint"
       ],
       "settings": {
@@ -59,6 +55,9 @@
         }
       }
     }
+  },
+  "remoteEnv": {
+    "GITHUB_TOKEN": "${localEnv:GITHUB_PERSONAL_ACCESS_TOKEN}"
   },
 
   // Set the user to connect as
