@@ -1,0 +1,210 @@
+---
+title: 基本的な作り方
+---
+
+## 手順
+
+Figma でテキストフィールドを作成する基本的な手順を説明します。
+
+### 1. フレームの配置
+
+画面下のツールバーからフレームを選択し、テキストフィールドの土台を作成します。
+
+- 画面下のメニューから、[フレーム]を選択する
+
+  <DocumentImage src="/img/ui/menu-frame-select.png" alt="フレームメニュー" />
+
+- 任意の大きさで、ページに配置する
+
+  <DocumentImage
+    src="/img/textfield/01/frame-creation/empty.png"
+    alt="空のフレーム"
+  />
+
+### 2. 背景色の設定
+
+フレームに背景色を設定して、テキストフィールドらしい見た目にします。
+
+- 右メニューの[塗り]から、背景色を以下のどちらかに設定する
+
+  - 白色（#FFFFFF）
+
+  <DocumentImage src="/img/ui/menu-fill-ffffff.png" alt="塗りメニュー" />
+
+  - 透明（任意の色 + 不透明度 0%）
+
+  <DocumentImage src="/img/ui/menu-fill-transparent.png" alt="塗りメニュー" />
+
+  <DocumentImage
+    src="/img/textfield/01/frame-fill/filled.png"
+    alt="塗りが設定されたフレーム"
+  />
+
+### 3. テキストの配置
+
+テキストフィールドに表示するプレースホルダーテキストを追加し、適切なサイズと色に調整します。
+
+- 画面下のメニューから、[テキスト]を選択する
+
+  <DocumentImage src="/img/ui/menu-text.png" alt="テキストメニュー" />
+
+- フレーム上で、テキストアイテムを配置してプレースホルダーとなる文字を入力する
+
+  <DocumentImage
+    src="/img/textfield/01/text-input/input.png"
+    alt="テキストを入力"
+  />
+
+- テキストの色を調整する
+
+  - テキストはデフォルトで黒色（#000000）になっています
+
+  <DocumentImage
+    src="/img/textfield/01/text-color/before.png"
+    alt="デフォルトの黒色テキスト"
+  />
+
+- 右メニューの[レイアウト] > [サイズ変更] > [幅の自動調整]を選択して、幅を文字の大きさに合わせる
+
+  <DocumentImage src="/img/ui/menu-layout-autowidth.png" alt="幅の自動調整" />
+
+  <DocumentImage
+    src="/img/textfield/01/text-autowidth/completed.png"
+    alt="テキストの幅を自動調整したテキストフィールド"
+  />
+
+### 4. オートレイアウトの設定
+
+フレームにオートレイアウトを追加して、テキストに応じて自動でサイズが調整されるようにします。
+
+- フレームを右クリックして、[オートレイアウトの追加]を選択する
+
+  <DocumentImage
+    src="/img/ui/menu-autolayout-add.png"
+    alt="オートレイアウトの追加メニュー"
+  />
+
+  <DocumentImage
+    src="/img/textfield/01/autolayout/completed.png"
+    alt="オートレイアウトが設定されたテキストフィールド"
+  />
+
+- オートレイアウト設定後、テキストフィールドの幅を元の大きさに戻す場合は、右メニューの[オートレイアウト] > [サイズ変更]設定を調整する
+
+  **重要**: 縦方向のサイズは「内包」に設定することで、パディング + テキストの高さに自動調整されます。これにより、テキストの大きさが変わってもテキストフィールドの高さが適切に保たれます。
+
+  <DocumentImage
+    src="/img/textfield/01/frame-size/complete.png"
+    alt="サイズ調整の完了状態"
+  />
+
+  <DocumentImage
+    src="/img/textfield/01/frame-size/panel.png"
+    alt="サイズ変更設定パネル"
+  />
+
+- テキストの配置を左寄せにする場合は、右メニューの[オートレイアウト] > [配置]から「左揃え」を選択する
+
+  <DocumentImage
+    src="/img/ui/menu-autolayout-align-left.png"
+    alt="オートレイアウトの左揃え設定"
+  />
+
+  <DocumentImage
+    src="/img/textfield/01/autolayout-align/panel.png"
+    alt="オートレイアウトの左揃え設定"
+  />
+
+### 5. 見た目の調整
+
+テキストフィールドらしい見た目にするために、パディングと角丸を設定します。
+
+#### パディングの調整
+
+- 右メニューの[オートレイアウト] > [パディング]から、適切な余白を設定する
+
+  <DocumentImage
+    src="/img/textfield/01/padding/completed.png"
+    alt="パディングが設定されたテキストフィールド"
+  />
+
+  <DocumentImage
+    src="/img/textfield/01/padding/panel.png"
+    alt="パディングパネル"
+  />
+
+:::tip パディング値の推奨設定
+
+テキストフィールドのパディング設定として一般的に使用される値：
+
+- **コンパクト**: 水平 8px / 垂直 6px（モバイルやスペース重視）
+- **標準**: 水平 12px / 垂直 8px（バランス重視）
+- **ゆったり**: 水平 16px / 垂直 12px（可読性重視）
+- **大きめ**: 水平 20px / 垂直 16px（デスクトップなど）
+
+**選び方**: デザインの密度や使用場面に応じて調整。コンパクトな 8px/6px から、ゆったりとした 16px/12px まで、どれも適切な選択肢です。
+
+:::
+
+#### 枠線の調整
+
+- 右メニューの[線] > [+]ボタンを押下して、枠線を追加する
+
+  <DocumentImage
+    src="/img/textfield/01/border-color/before.png"
+    alt="枠線追加前の状態"
+  />
+
+- 枠線の設定を調整する
+
+  - **色**: 灰色(#D1D5DB)に設定することで、テキストフィールドらしい境界線を作成する
+  - **太さ**: 1px 程度の細い線が一般的
+  - **位置**: 内側に設定することで、フレームサイズを変更せずに枠線を追加
+
+  <DocumentImage
+    src="/img/textfield/01/border-color/after.png"
+    alt="枠線を設定したテキストフィールド"
+  />
+
+  <DocumentImage
+    src="/img/textfield/01/border-color/panel.png"
+    alt="枠線を設定したテキストフィールド"
+  />
+
+:::tip 枠線色の選択
+
+テキストフィールドの枠線色として一般的に使用される色：
+
+- **灰色系**: #D1D5DB、#E5E7EB（最も一般的）
+- **薄いグレー**: #F3F4F6、#F9FAFB（控えめな印象）
+- **中間グレー**: #9CA3AF、#6B7280（やや目立たせたい場合）
+- **具体例**: 背景白(#FFFFFF) + 枠線(#D1D5DB)
+
+**推奨**: アクセシビリティを考慮し、背景色とのコントラスト比が適切な #D1D5DB を使用することをお勧めします。
+
+:::
+
+#### 角丸の調整
+
+- 右メニューの[外見] > [角の半径]から、テキストフィールドの角丸を調整する
+- 一般的なテキストフィールドでは、**4px** 程度の角丸が適正とされています
+
+  <DocumentImage src="/img/ui/panel-appearance.png" alt="外見メニュー" />
+
+  <DocumentImage
+    src="/img/textfield/01/corner-radius/panel.png"
+    alt="角丸が設定されたテキストフィールド"
+  />
+
+:::tip テキストフィールドの角丸について
+
+テキストフィールドの角丸設定は**オプション**です：
+
+- **角丸なし（0px）**: シャープで直線的なデザイン、フォーマルな印象
+- **軽い角丸（2-4px）**: 柔らかい印象でありながら控えめ（最も一般的）
+- **中程度の角丸（6-8px）**: モダンで親しみやすい印象
+- **強い角丸（12px 以上）**: カジュアルで丸い印象
+
+**デザインスタイルに合わせて選択**: 角丸の有無や程度は、全体のデザインシステムや求める印象に応じて調整しましょう。
+
+:::
