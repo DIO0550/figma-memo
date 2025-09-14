@@ -36,6 +36,10 @@ Figma ドキュメントサイトで使用する画像ファイルの統一命�
 - `layout` - レイアウト関連
 - `appearance` - 外見関連
 - `autolayout` - オートレイアウト関連
+- `component` - コンポーネント関連
+- `variant` - バリアント関連
+- `property` - プロパティ関連
+- `name` - 名前・リネーム関連
 
 #### state
 
@@ -43,21 +47,28 @@ Figma ドキュメントサイトで使用する画像ファイルの統一命�
 - `empty` - 空の状態
 - `filled` - 設定済み状態
 - `set` - 設定完了状態
+- `before` - 変更前の状態
+- `after` - 変更後の状態
+- `create` - 作成状態
+- `input` - 入力状態
 
 ## 命名例
 
 ### UI メニュー・パネル系
 
-```
+```text
 /img/ui/menu-frame-select.png
 /img/ui/menu-fill.png
 /img/ui/menu-text.png
+/img/ui/menu-component-create.png
+/img/ui/menu-variant-create.png
+/img/ui/menu-variant-property.png
 /img/ui/panel-appearance.png
 ```
 
 ### ボタン作成段階系
 
-```
+```text
 /img/button/step01-frame-empty.png
 /img/button/step02-frame-filled.png
 /img/button/step03-text-input.png
@@ -67,9 +78,19 @@ Figma ドキュメントサイトで使用する画像ファイルの統一命�
 /img/button/step07-radius-set.png
 ```
 
+### ボタン状態作成段階系
+
+```text
+/img/button/02/step01-frame-name-before.png
+/img/button/02/step02-frame-name-after.png
+/img/button/02/step03-frame-component-create.png
+/img/button/02/step04-frame-variant-create.png
+/img/button/02/step05-frame-variant-input.png
+```
+
 ### 他のコンポーネント例
 
-```
+```text
 /img/checkbox/step01-frame-empty.png
 /img/checkbox/step02-shape-added.png
 /img/input/step01-frame-empty.png
