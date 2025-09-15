@@ -1,0 +1,275 @@
+---
+title: 状態の作成
+---
+
+## 概要
+
+TextField は、フォーカス時や未入力状態などで見た目や振る舞いが変わるため、その状態の作成方法を記載する。
+
+## 共通手順
+
+### 1. コンポーネント化
+
+TextField を使いまわせるように、まずはコンポーネント化する。
+
+#### フレームの名前の変更
+
+コンポーネントで使いまわす際に、フレーム名がデフォルトのままだと、後でどのフィールドか判別しにくくなります。そのため、わかりやすい名前を付けましょう。
+
+1. 対象のフレームを選択します
+2. レイヤーパネルでフレーム名をダブルクリックするか、フレーム選択時に左上に表示される名前部分をクリックして編集状態にします
+
+<DocumentImage
+  src="/img/textfield/02/frame-naming/before.png"
+  alt="フレーム名の編集前"
+/>
+
+3. TextField の用途がわかる名前を入力します（例：「Primary TextField」「Search Field」など）
+
+<DocumentImage
+  src="/img/textfield/02/frame-naming/after.png"
+  alt="フレーム名の編集後"
+/>
+
+#### コンポーネントの作成
+
+1. 対象のフレームを選択します
+2. フレームを右クリックして、コンテキストメニューから「コンポーネントの作成」を選択します
+
+<DocumentImage
+  src="/img/ui/menu-component-create.png"
+  alt="コンポーネント作成のコンテキストメニュー"
+/>
+
+3. コンポーネントが作成され、フレームの左上にコンポーネントアイコンが表示されます
+
+<DocumentImage
+  src="/img/textfield/02/component-creation/completed.png"
+  alt="コンポーネント作成後の状態"
+/>
+
+<Card
+  title="コンポーネントについて"
+  description="Figmaでのコンポーネントの作成方法と使用方法について詳しく説明しています。"
+  link="/Component"
+/>
+
+### 2. バリアントの作成
+
+コンポーネントに状態（デフォルト、未入力、フォーカス、無効化など）を追加するために、バリアント機能を使用します。
+
+#### バリアントの追加手順
+
+1. 作成したコンポーネントを選択します
+2. 右側のプロパティパネルで、デザインタブ内の「バリアント」セクションにある **+** ボタンをクリックして「バリアントの追加」を選択します
+
+<DocumentImage
+  src="/img/ui/menu-variant-create.png"
+  alt="バリアント追加メニュー"
+/>
+
+3. 新しいバリアントが作成され、元のコンポーネントと複製されたバリアントが表示されます
+
+<DocumentImage
+  src="/img/textfield/02/variant-creation/created.png"
+  alt="バリアント作成後の状態"
+/>
+
+4. 右側のプロパティパネルで、バリアントのプロパティを設定します
+
+<DocumentImage
+  src="/img/ui/menu-variant-property.png"
+  alt="バリアントプロパティパネル"
+/>
+
+5. プロパティ名（例：「State」）と値（例：「Default」「Empty」「Focus」「Disabled」）を設定して、状態を定義します
+
+<DocumentImage
+  src="/img/textfield/02/variant-creation/property-input.png"
+  alt="バリアントプロパティの入力"
+/>
+
+#### 状態の見た目の調整
+
+6. 作成したバリアント（例：Focus 状態）を選択し、ボーダー色やシャドウ、カーソル表示などを調整して、状態に応じた視覚的な変化を加えます
+
+## Default（デフォルト）状態の設定
+
+バリアント作成時に元のコンポーネントが Default 状態として設定されますが、プロパティ値を明確に設定しておくことで管理しやすくなります。
+
+1. バリアント作成前に作成した元のフレームを選択します
+
+<DocumentImage
+  src="/img/textfield/02/default-state/select-frame.png"
+  alt="デフォルトフレームの選択"
+/>
+
+2. 右側のプロパティパネルで、State プロパティの値を入力します
+
+<DocumentImage
+  src="/img/textfield/02/default-state/input-property.png"
+  alt="Defaultプロパティの入力"
+/>
+
+:::tip プロパティ値の候補
+
+以下のような値が一般的に使用されます：
+
+- Default - 最も標準的で推奨される表記
+- Normal - 通常状態を表す分かりやすい表記
+- Rest - UI/UX デザインでよく使われる安静状態
+- Idle - 待機状態を表す
+- Base - 基本状態を表す
+
+推奨: 他の状態（Empty、Focus、Disabled）との統一性を考慮し、英語表記の「Default」を使用することをお勧めします。
+
+:::
+
+## Empty（入力なし）状態の設定
+
+1. バリアント作成で作成したフレームを選択します
+
+<DocumentImage
+  src="/img/textfield/02/empty-state/select-frame.png"
+  alt="入力なしフレームの選択"
+/>
+
+2. 右側のプロパティパネルで、State プロパティの値を「Empty」に入力します
+
+<DocumentImage
+  src="/img/textfield/02/empty-state/input-property.png"
+  alt="Emptyプロパティの入力"
+/>
+
+3. プレースホルダーのテキストスタイルを調整します
+
+右側のプロパティパネルでテキストの塗り（Fill）を薄めの色に変更し、未入力であることを示します
+
+<div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
+  <div style={{ flex: 1 }}>
+    <DocumentImage
+      src="/img/textfield/02/empty-state/placeholder-before.png"
+      alt="プレースホルダー操作前"
+    />
+  </div>
+  <div style={{ flex: 1 }}>
+    <DocumentImage
+      src="/img/textfield/02/empty-state/placeholder-after.png"
+      alt="プレースホルダー操作後"
+    />
+  </div>
+</div>
+
+:::tip Empty（入力なし）状態のデザイン
+
+一般的には以下のように設定します：
+
+- プレースホルダーは本文より 30-50% 明度を上げた色（または不透明度を 50-70% に）
+- 枠線は Default と同じか、わずかにコントラストを下げる
+- 入力アイコンなどがある場合は不透明度を軽く下げる
+
+:::
+
+## Focus（フォーカス）状態
+
+1. Empty または Default 状態のフレームを選択して、バリアント追加の **+** ボタンをクリックします
+
+<DocumentImage
+  src="/img/textfield/02/focus-state/add-variant.png"
+  alt="バリアント追加"
+/>
+
+2. 新しく作成されたフレームを選択します
+
+<DocumentImage
+  src="/img/textfield/02/focus-state/select-frame.png"
+  alt="フォーカス状態フレームの選択"
+/>
+
+3. 右側のプロパティパネルで、State プロパティの値を「Focus」に入力します
+
+<DocumentImage
+  src="/img/textfield/02/focus-state/input-property.png"
+  alt="Focusプロパティの入力"
+/>
+
+4. フォーカス状態の枠線と影を調整します
+
+右側のプロパティパネルでストローク色を強めのブランド色にし、必要に応じて内側のシャドウ（Inner shadow）でフォーカスリングを表現します
+
+<div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
+  <div style={{ flex: 1 }}>
+    <DocumentImage
+      src="/img/textfield/02/focus-state/border-before.png"
+      alt="枠線操作前"
+    />
+  </div>
+  <div style={{ flex: 1 }}>
+    <DocumentImage
+      src="/img/textfield/02/focus-state/border-after.png"
+      alt="枠線操作後（フォーカスリング）"
+    />
+  </div>
+</div>
+
+:::tip Focus（フォーカス）状態のデザイン
+
+一般的には以下のように設定します：
+
+- 枠線色はブランド色に近づけ、太さは 1-2px 程度に
+- アクセシビリティのため、WCAG のフォーカス可視性を満たすコントラストを確保
+- 内側シャドウや外側グローでフォーカスリングを追加（過度に強すぎない）
+
+:::
+
+## Disabled（無効）状態
+
+1. Focus または Default 状態のフレームを選択して、バリアント追加の **+** ボタンをクリックします
+
+<DocumentImage
+  src="/img/textfield/02/disabled-state/add-variant.png"
+  alt="バリアント追加"
+/>
+
+2. 新しく作成されたフレームを選択します
+
+<DocumentImage
+  src="/img/textfield/02/disabled-state/select-frame.png"
+  alt="無効状態フレームの選択"
+/>
+
+3. 右側のプロパティパネルで、State プロパティの値を「Disabled」に入力します
+
+<DocumentImage
+  src="/img/textfield/02/disabled-state/input-property.png"
+  alt="Disabledプロパティの入力"
+/>
+
+4. 無効状態のスタイルを調整します
+
+背景・枠線・テキストのコントラストを下げ、入力できないことがわかるようにします
+
+<div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
+  <div style={{ flex: 1 }}>
+    <DocumentImage
+      src="/img/textfield/02/disabled-state/style-before.png"
+      alt="操作前"
+    />
+  </div>
+  <div style={{ flex: 1 }}>
+    <DocumentImage
+      src="/img/textfield/02/disabled-state/style-after.png"
+      alt="操作後（グレー系に）"
+    />
+  </div>
+</div>
+
+:::tip Disabled（無効）状態のデザイン
+
+一般的には以下のように変更します：
+
+- テキストとアイコンの不透明度を 40-60% に
+- 背景は #F2F2F2 などの薄いグレー、枠線は #E0E0E0 などに
+- プレースホルダーとラベルもコントラストを落とし、フォーカスリングは表示しない
+
+:::
