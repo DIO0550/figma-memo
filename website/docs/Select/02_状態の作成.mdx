@@ -1,0 +1,29 @@
+---
+title: 状態の作成
+---
+
+## 概要
+
+Select は操作に応じて視覚が大きく変化します。バリアントで以下の状態を用意します。
+
+- Default / Hover / Focus / Disabled / Open
+
+### バリアントの追加
+
+<DocumentImage src="/img/ui/menu-variant-create.png" alt="バリアント追加" />
+
+1. コンポーネントを選択し、バリアントを追加
+2. プロパティ名: `State`、値: `Default` | `Hover` | `Focus` | `Disabled` | `Open`
+
+### 各状態の調整ポイント
+
+- Hover: 背景をわずかにトーンアップ、カーソルを pointer
+- Focus: 枠線をブランド色、フォーカスリング（Inner shadow）
+- Disabled: テキストとアイコンの不透明度を下げ、背景/枠線コントラストを弱める
+- Open: メニューを表示（別コンポーネントでも可）。本体の下にドロップシャドウを追加
+
+:::tip アクセシビリティ
+
+- フォーカス状態は WCAG の可視性を満たすコントラストを確保
+- Hit area は最小 44×44px 程度を目安
+  :::

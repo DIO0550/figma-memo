@@ -1,0 +1,43 @@
+---
+title: 基本的な作り方
+---
+
+## 手順
+
+Figma でセレクトのベースを作る手順です。
+
+### 1. フレームの配置
+
+<DocumentImage src="/img/ui/menu-frame-select.png" alt="フレームメニュー" />
+
+1. フレームを配置し、Auto Layout を有効化（水平・左右パディング）
+2. テキスト（選択中のラベル）を配置
+3. 右側に矢印アイコン（▼）を配置
+
+### 2. 塗り・枠線の設定
+
+<DocumentImage src="/img/ui/menu-fill.png" alt="塗りメニュー" />
+
+- 背景（Fill）と枠線（Stroke）を設定
+- 角丸、内側の余白を整える
+
+### 3. コンポーネント化
+
+<DocumentImage
+  src="/img/ui/menu-component-create.png"
+  alt="コンポーネント作成"
+/>
+
+- フレームを選択し、コンポーネントを作成
+- 名前は「Select / Base」など用途がわかるものに
+
+### 4. メニューの土台
+
+- 別フレームでメニューリスト用の土台を用意（縦方向 Auto Layout）
+- リストアイテムの高さ、ホバー背景などを簡単に作成
+
+<Card
+  title="Auto Layout"
+  description="要素の間隔やパディングを保ちながら拡縮できるように設計しましょう。"
+  link="/AutoLayout"
+/>

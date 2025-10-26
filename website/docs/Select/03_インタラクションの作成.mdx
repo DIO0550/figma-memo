@@ -1,0 +1,21 @@
+---
+title: インタラクションの作成
+---
+
+## 開閉とキーボード操作
+
+- Click: 本体クリックで `Open` トグル
+- Keyboard: ↑/↓ でハイライト移動、Enter で決定、Esc で閉じる
+- Outside Click: 外側クリックで閉じる
+
+## Figma での設定例
+
+1. 原因: "本体をクリック" → 結果: "Open に切り替え"
+2. 原因: "外側をクリック" → 結果: "Default に戻す"
+3. 原因: "キー押下(Enter)" → 結果: "選択状態を更新"
+
+<DocumentImage src="/img/ui/menu-variant-property.png" alt="プロパティ設定" />
+
+:::tip 運用
+メニューは分離したコンポーネントにして、Instance Swap で差し替えると拡張しやすくなります。
+:::
