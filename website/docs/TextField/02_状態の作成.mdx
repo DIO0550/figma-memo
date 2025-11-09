@@ -203,9 +203,9 @@ HSL モードで輝度（L 値）を調整して明るくします
   alt="Focusプロパティの入力"
 />
 
-4. フォーカス状態の枠線と影を調整します
+4. フォーカス状態の枠線を調整します
 
-右側のプロパティパネルでストローク色を強めのブランド色にし、必要に応じて内側のシャドウ（Inner shadow）でフォーカスリングを表現します
+右側のプロパティパネルでストローク色をブランド色に変更します
 
 <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
   <div style={{ flex: 1 }}>
@@ -217,18 +217,34 @@ HSL モードで輝度（L 値）を調整して明るくします
   <div style={{ flex: 1 }}>
     <DocumentImage
       src="/img/textfield/02/focus-state/border-after.png"
-      alt="枠線操作後（フォーカスリング）"
+      alt="枠線操作後（ブランド色）"
     />
   </div>
 </div>
 
-:::tip Focus（フォーカス）状態のデザイン
+<DocumentImage
+  src="/img/textfield/02/focus-state/completed.png"
+  alt="フォーカス状態の完成"
+/>
+
+:::tip Focus(フォーカス)状態のデザイン
 
 一般的には以下のように設定します：
 
-- 枠線色はブランド色に近づけ、太さは 1-2px 程度に
-- アクセシビリティのため、WCAG のフォーカス可視性を満たすコントラストを確保
-- 内側シャドウや外側グローでフォーカスリングを追加（過度に強すぎない）
+- **枠線色**: ブランド色に変更し、太さは 1-2px 程度に
+- **アクセシビリティ**: WCAG のフォーカス可視性を満たすコントラストを確保
+
+**具体的な設定例**:
+
+| 項目         | 値      | 色                                                                                                                                                            |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ストローク色 | #007AFF | <span style={{display: 'inline-block', width: '20px', height: '20px', backgroundColor: '#007AFF', border: '1px solid #ccc', verticalAlign: 'middle'}}></span> |
+| ストローク色 | #0066CC | <span style={{display: 'inline-block', width: '20px', height: '20px', backgroundColor: '#0066CC', border: '1px solid #ccc', verticalAlign: 'middle'}}></span> |
+| ストローク色 | #1976D2 | <span style={{display: 'inline-block', width: '20px', height: '20px', backgroundColor: '#1976D2', border: '1px solid #ccc', verticalAlign: 'middle'}}></span> |
+| ストローク色 | #10B981 | <span style={{display: 'inline-block', width: '20px', height: '20px', backgroundColor: '#10B981', border: '1px solid #ccc', verticalAlign: 'middle'}}></span> |
+| ストローク色 | #8B5CF6 | <span style={{display: 'inline-block', width: '20px', height: '20px', backgroundColor: '#8B5CF6', border: '1px solid #ccc', verticalAlign: 'middle'}}></span> |
+| ストローク色 | #F59E0B | <span style={{display: 'inline-block', width: '20px', height: '20px', backgroundColor: '#F59E0B', border: '1px solid #ccc', verticalAlign: 'middle'}}></span> |
+| ストローク幅 | 2px     | -                                                                                                                                                             |
 
 :::
 
